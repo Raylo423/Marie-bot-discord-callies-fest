@@ -1,0 +1,6 @@
+Splatfest team names:
+
+"zou2008" = "team A"
+"Tessnim" = "team A"
+"zou2008" = "team B"
+"Son Goku" = "team A"
