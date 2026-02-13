@@ -5,7 +5,7 @@ const https = require('https');
 
 // --- CONFIGURATION ---
 // Sur Koyeb/Hébergement, utilisez les variables d'environnement pour plus de sécurité.
-const TOKEN = process.env.DISCORD_TOKEN || 'MTQ1OTQ2NTI5MTg0NjM4NTc2Nw.GSNiSK.4GMBlqtZ3CeVWlX8u3wbLt82xn3yxWpjOdBt5w';
+const TOKEN = process.env.DISCORD_TOKEN; // Utilisez les variables d'environnement sur Koyeb/Hébergement
 const OWNER_ROLE_ID = '1463484076890783947'; // ID du rôle @owner
 const HOSTER_ROLE_ID = '1463496433138274490'; // ID du rôle @Splatfest Hoster
 const MATCHMAKER_ROLE_ID = '1463496433138274490'; // ID du rôle @Matchmaker (même ID fourni)
