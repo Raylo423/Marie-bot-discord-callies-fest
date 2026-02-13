@@ -5,7 +5,7 @@ const https = require('https');
 
 // --- CONFIGURATION ---
 // Sur Koyeb/Hébergement, utilisez les variables d'environnement pour plus de sécurité.
-const TOKEN = process.env.DISCORD_TOKEN;
+const TOKEN = process.env.DISCORD_TOKEN ? process.env.DISCORD_TOKEN.trim() : null;
 
 if (!TOKEN || TOKEN === "" || TOKEN === "YOUR_TOKEN_HERE") {
     console.error("❌ ERREUR CRITIQUE : Le Token Discord est absent !");
@@ -13,6 +13,11 @@ if (!TOKEN || TOKEN === "" || TOKEN === "YOUR_TOKEN_HERE") {
     console.error("👉 Solution : Allez sur Koyeb > Votre Service > Settings > Environment Variables.");
     console.error("👉 Ajoutez la variable 'DISCORD_TOKEN' avec votre token comme valeur.");
     process.exit(1);
+}
+
+// Debug discret pour vérifier le format sans afficher le token
+if (TOKEN.length < 50) {
+    console.log(`⚠️ Note : Le Token est court (${TOKEN.length} caractères). Vérifiez s'il est complet.`);
 }
 const OWNER_ROLE_ID = '1463484076890783947'; // ID du rôle @owner
 const HOSTER_ROLE_ID = '1463496433138274490'; // ID du rôle @Splatfest Hoster
